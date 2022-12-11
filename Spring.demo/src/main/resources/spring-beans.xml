@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context/ 
+  http://www.springframework.org/schema/context/spring-context.xsd">
+ <!--    
+ <bean name = "Person1"  class="com.example.demo.Person">
+  <property name="PersonId" value="001"></property>
+  <property name="personName" value="Anil"></property>
+  <property name="MobileNumber" value="9567875148"></property>
+  </bean>
+  <bean name = "Person2"  class="com.example.demo.Person">
+  <property name="PersonId" value="001"></property>
+  <property name="personName" value="Anil"></property>
+  <property name="MobileNumber" value="9567875148"></property>
+  </bean>
+  
+  
+  <bean id ="person" class = "com.List.withSpring.PersonInfo" name = "person2">
+    <property name = "PersonData" >
+     <list >
+      <value> Raj </value >
+      <value> Ram </value >
+      <value> Shree </value >
+      <value> Sam </value >
+      </list>
+     </property>
+</bean >
+-->
+ <!--   
+  <bean id = "student" class = "com.object.injection.StudentInfo" scope="prototype" lazy-init="true">
+   <property name="studentId" value="101"></property>
+   <property name="studentName" value="Rahul"></property>
+   <property name="studentAddress" ref = "studentAddress"></property>
+   
+ </bean>
+  <bean id = "studentAddress" class = "com.object.injection.StudentAddress" scope="prototype" lazy-init="true">
+   <property name="city" value="Pune"></property>
+   <property name="locality" value="Ram Nagar"></property>
+   <property name="pinCode" value="416202"></property>
+ </bean>
+  --> 
+  <!-- constructor injection -->
+<!--bean id = "employee" class = "com.constructor.injection.EmployeeInfo" scope="prototype" lazy-init="true">
+   <constructor-arg value = "101"/>
+   <constructor-arg value = "Rahul"/>
+   <constructor-arg value = "8564654342"/>
+   <constructor-arg ref = "employeeAddress"/>
+  
+ </bean>
+ <bean id = "employeeAddress" class = "com.constructor.injection.EmployeeAddress" scope="prototype" lazy-init="true">
+   <property name="area" value="Ram nagar"></property>
+   <property name="Street" value="Main Road"></property>
+   <property name="pinCode" value="955422"></property>
+ </bean-->  
+<!-- 
+ <bean id = "dbConnection" class = "com.DBConnection.spring.DBConnection" >
+   <constructor-arg value = "jdbc:postgresql://localhost/bank"/>
+   <constructor-arg value = "postgres"/>
+   <constructor-arg value = "130994"/>
+ </bean>
+  -->
+ 
+ <!-- Autowiring with byType -->
+ <!--  
+ <bean id = "student" class = "com.object.injection.StudentInfo" autowire="byType">
+   <property name="studentId" value="101"></property>
+   <property name="studentName" value="Rahul"></property>
+   
+ </bean>
+  <bean id = "studentAddress" class = "com.object.injection.StudentAddress">
+   <property name="city" value="Pune"></property>
+   <property name="locality" value="Ram Nagar"></property>
+   <property name="pinCode" value="416202"></property>
+ </bean>
+ -->
+ 
+ <!-- Autowiring with byType with multiple beans -->
+ <!-- 
+ <bean id = "student" class = "com.object.injection.StudentInfo" autowire="byType">
+   <property name="studentId" value="101"></property>
+   <property name="studentName" value="Rahul"></property>  
+ </bean>
+ 
+  <bean id = "studentAddress" class = "com.object.injection.StudentAddress" autowire-candidate="false">
+   <property name="city" value="Pune"></property>
+   <property name="locality" value="Ram Nagar"></property>
+   <property name="pinCode" value="416202"></property>
+ </bean>
+ 
+ <bean id = "studentAddress1" class = "com.object.injection.StudentAddress" autowire-candidate="true">
+   <property name="city" value="Mumbai"></property>
+   <property name="locality" value="Shree Nagar"></property>
+   <property name="pinCode" value="416205"></property>
+ </bean>
+ -->
+ <!-- Autowiring with byName 
+
+ <bean id = "student" class = "com.object.injection.StudentInfo" autowire="byName">
+   <property name="studentId" value="101"></property>
+   <property name="studentName" value="Rahul"></property>  
+ </bean>
+ 
+  <bean id = "studentAddress" class = "com.object.injection.StudentAddress">
+   <property name="city" value="Pune"></property>
+   <property name="locality" value="Ram Nagar"></property>
+   <property name="pinCode" value="416202"></property>
+ </bean>
+ 
+ <bean id = "studentAddress1" class = "com.object.injection.StudentAddress" >
+   <property name="city" value="Mumbai"></property>
+   <property name="locality" value="Shree Nagar"></property>
+   <property name="pinCode" value="416205"></property>
+ </bean>
+-->
+ 
+ <!-- Autowiring by constructor 
+ 
+ 
+ <bean id = "employee" class = "com.constructor.injection.EmployeeInfo" autowire="constructor">
+ <constructor-arg name = "employeeId" value = "101"/>
+   <constructor-arg name = "employeeName" value = "Rahul"/>
+   <constructor-arg name = "employeeMobileNumber" value = "8564654342"/> 
+ </bean>
+ <bean id = "employeeAddress" class = "com.constructor.injection.EmployeeAddress" >
+   <property name="area" value="Ram nagar"></property>
+   <property name="Street" value="Main Road"></property>
+   <property name="pinCode" value="955422"></property>
+  </bean>
+ -->
+  
+</beans>
